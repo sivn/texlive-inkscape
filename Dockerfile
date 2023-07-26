@@ -1,2 +1,3 @@
-FROM registry.gitlab.com/islandoftex/images/texlive:latest
-RUN apt-get update && apt-get install -y inkscape imagemagick
+FROM codercom/enterprise-base:ubuntu
+
+RUN apt-get update && apt-get install -y texlive-full inkscape imagemagick
