@@ -2,7 +2,7 @@ name: Build and Publish
 
 on:
   push:
-    branches: [main]
+    branches: [develop-workspace-container]
   pull_request:
 
 jobs:
@@ -29,8 +29,8 @@ jobs:
         with:
           context: ./
           tags: |
-            sivn/texlive-inkscape:latest 
-          push: ${{ github.ref == 'refs/heads/main' }}
+            sivn/texlive-inkscape:latest-workspace
+          push: ${{ github.ref == 'refs/heads/develop-workspace-contsinrt' }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
